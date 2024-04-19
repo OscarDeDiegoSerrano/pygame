@@ -22,7 +22,7 @@ def PintaObjectes():
     pygame.draw.rect(finestraJoc, (255, 0, 0), jugador1)  # Color vermell per al jugador 1
     pygame.draw.rect(finestraJoc, (0, 0, 255), jugador2)  # Color blau per al jugador 2
 
-def DetectaEvents():
+def Moviments():
 
     global jugador1_posY, jugador2_posY
     keys = pygame.key.get_pressed()
@@ -48,7 +48,7 @@ while not gameOver:
     rellotge.tick(30)
     pygame.display.update()
     PintaObjectes()
-    DetectaEvents()
+    Moviments()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameOver = True
